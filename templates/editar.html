@@ -1,0 +1,102 @@
+<form ng-submit="persistir()" class="form-horizontal" role="form">
+	<h1>{{encabezado}}</h1>
+
+	<div class="form-group">
+	<label for="cedula" class="col-lg-2 control-label">Cédula<b>*</b>: </label>
+	<div class="col-lg-10">
+	    <input class="search-query" type="number" id="cedula" ng-model="persona.cedula" required ng-disabled={{bandera}}>
+	</div>
+	</div>
+
+	
+	<div class="form-group">
+	<label for="nombres" class="col-lg-2 control-label">Nombres: </label>
+	<div class="col-lg-10">
+	    <input class="search-query" type="text" id="nombres" ng-model="persona.nombres">
+	</div>
+	</div>
+
+
+	<div class="form-group">
+	<label for="apellidos" class="col-lg-2 control-label">Apellidos: </label>
+	<div class="col-lg-10">
+	    <input class="search-query" type="text" id="apellidos" ng-model="persona.apellidos">
+	</div>	
+	</div>
+
+	<div class="form-group">
+	<label for=estado_civil class="col-lg-2 control-label">Estado Civil: </label>
+	<div class="col-lg-10">
+	    <input type="radio" id="estado_civil" ng-model="persona.estadoCivil" value="soltero">
+	    soltero
+	    <input type="radio" id="estado_civil" ng-model="persona.estadoCivil" value="casado">
+	    casado
+	</div>
+	</div>
+	
+	<div class="form-group">
+	<label for="fecha_nacimiento" class="col-lg-2 control-label">Fecha de Nacimiento </label>
+	<div class="col-lg-10">
+    	<input type="text" name="fecha_nacimiento" id="fecha_nacimiento" ng-model="persona.fechaNacimiento" id="fecha_nacimiento" placeholder="yyyy-MM-dd"  class="text ui-widget-content"/>
+    </div>
+    </div>
+
+
+	<div class="form-group">
+
+    <label for="sueldo" class="col-lg-2 control-label">Sueldo:  </label>
+    <div class="col-lg-10">
+	  <input class="search-query" type="number" id="sueldo" ng-model="persona.sueldo">
+	</div>
+	</div>
+
+	<div class="form-group">
+
+	<label for="correo" class="col-lg-2 control-label">Correo:  </label>
+	<div class="col-lg-10">
+	  <input class="search-query" type="email" id="correo" ng-model="persona.correo">
+	</div>
+	</div>
+
+	<div class="form-group">
+
+	<label for="departamento" class="col-lg-2 control-label">departamento:  </label>
+	<div class="col-lg-10">
+	<select name="departamento" id="departamento"
+      ng-options="option.nombre for option in dptos track by option.id"
+      ng-model="persona.departamento" ng-change="persona.ciudad={}">
+    </select>
+	</div>
+    </div>
+
+	<div class="form-group">
+
+	<label for="ciudad" class="col-lg-2 control-label">ciudad:  </label>
+	<div class="col-lg-10">
+	<select name="ciudad" id="ciudad"
+      ng-options="option.nombre for option in persona.departamento.ciudades track by option.id"
+      ng-model="persona.ciudad">
+    </select>
+	</div>
+    </div>
+	
+
+	<div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">	
+	
+		<input type="submit" value={{tipoPersistencia}} class="btn btn-primary">
+
+	</div>
+	</div>
+
+
+</form>
+
+
+<script>
+			
+	$("#fecha_nacimiento").datepicker({
+			dateFormat: "yy-mm-dd",
+			appendText: "(yyyy-mm-dd)"
+	});
+</script>

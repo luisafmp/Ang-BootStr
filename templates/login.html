@@ -1,0 +1,29 @@
+<form ng-submit="valida_usuario()" class="form-horizontal" role="form">
+		<br/>
+		<br/>
+		<div class="form-group">
+			<label for="usuario" class="col-lg-2 control-label">Usuario:</label>
+			<div class="col-lg-10">
+			    <input type="text" id="usuario" name="usuario" ng-model="usuario.nombre" class="search-query">
+			</div>
+		</div>	
+
+	
+	
+
+		<div class="form-group">
+			<label for="contrasena" class="col-lg-2 control-label">Contraseña:</label>
+			<div class="col-lg-10">
+			    <input type="password" id="contrasena" name="contrasena" ng-model="usuario.contrasena" class="search-query">
+			</div>
+		</div>
+
+	
+
+
+		 <div class="form-group">
+    		<div class="col-lg-offset-2 col-lg-10">	
+				<input type="submit" class="btn btn-primary">
+			</div>
+		</div>
+</form>

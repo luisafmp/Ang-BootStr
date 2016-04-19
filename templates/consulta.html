@@ -1,0 +1,67 @@
+<table class="table table-bordered table-striped table-hover">
+	<tr>
+		<th>
+			Cédula
+		</th>
+		<th>
+			Nombres
+		</th>
+		<th>
+			Apellidos
+		</th>
+		<th>
+			Estado Civil
+		</th>
+		<th>
+			Fecha Nacimiento
+		</th>
+		<th>
+			Sueldo
+		</th>
+		<th>
+			Correo
+		</th>
+		<th>
+			Departamento
+		</th>
+		<th>
+			Ciudad
+		</th>
+	</tr>
+
+	<tr ng-repeat="persona in personas">
+		<td>
+			<a href="#/editar/{{persona}}/{{personas}}" class="link"><b>{{persona.cedula}}</b></a>
+		</td>
+		<td>
+			{{persona.nombres}}
+		</td>
+		<td>
+			{{persona.apellidos}}
+		</td>
+		<td>
+			{{persona.estadoCivil}}
+		</td>
+		<td>
+			{{persona.fechaNacimiento}}
+		</td>
+		<td>
+			{{persona.sueldo}}
+		</td>
+		<td>
+			{{persona.correo}}
+		</td>
+		<td>
+			{{persona.departamento.nombre}}
+		</td>
+		<td>
+			{{persona.ciudad.nombre}}
+		</td>
+		<td>
+			<a href="#/eliminar/{{persona}}/{{personas}}" class="btn btn-danger"><b>X</b></a>
+		</td>
+	</tr>
+</table>
+
+
+<a href="#/crear/{{personas}}" class="btn btn-primary">Crear Nuevo</a>

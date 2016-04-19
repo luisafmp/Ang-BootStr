@@ -1,0 +1,47 @@
+[
+	{"id":1,"nombre":"cundinamarca","ciudades":
+		[
+		{"id":1,"nombre":"Madrid"},
+		{"id":2,"nombre":"Mosquera"},
+		{"id":3,"nombre":"La Mesa"},
+		{"id":4,"nombre":"La Vega"}
+		]
+	},
+	{"id":2,"nombre":"Nariño","ciudades":
+		[
+		{"id":1,"nombre":"Pasto"},
+		{"id":2,"nombre":"Ipiales"},
+		{"id":3,"nombre":"Aldana"},
+		{"id":4,"nombre":"Funes"}
+		]
+	},
+	{"id":3,"nombre":"Atlantico","ciudades":
+		[
+		{"id":1,"nombre":"Barranquilla"},
+		{"id":2,"nombre":"Soledad"},
+		{"id":3,"nombre":"Sabanalarga"},
+		{"id":4,"nombre":"Candelaria"}
+		]
+	},
+	{"id":4,"nombre":"Magdalena","ciudades":
+		[
+		{"id":1,"nombre":"Santa Marta"},
+		{"id":2,"nombre":"Cienaga"},
+		{"id":3,"nombre":"Salamina"},
+		{"id":4,"nombre":"Chibolo"}
+		]
+	},
+	{"id":5,"nombre":"Boyacá","ciudades":
+		[
+		{"id":1,"nombre":"Tunja"},
+		{"id":2,"nombre":"Chiquinquirá"},
+		{"id":3,"nombre":"Moniquirá"},
+		{"id":4,"nombre":"Guateque"}
+		]
+	},
+	{"id":6,"nombre":"Bogotá D.C","ciudades":
+		[
+		{"id":1,"nombre":"Bogotá D.C."}
+		]
+	}
+]
